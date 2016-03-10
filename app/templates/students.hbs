@@ -1,39 +1,29 @@
-{{!-- FILE MODIFIED: 1:45PM by MM --}}
-{{!-- FILE MODIFIED START --}}
 <div align="center">
-  <h4>Questions for Ouda</h4>
-  1. Refer to class diagram, the Grade branch. Would you like us to to call the attribute in the Grade class "programrecord"
-   or "level"?
-</div>
-<hr>
-{{!-- FILE MODIFIED END--}}
-
-<div align="center">
-<br><br>
-<img src="assets/images/Western.gif">
-<h3>Students Admission System</h3>
-<br>
-<div class="studentsbox">
-<ul class="circle">
-    <ul>
-      {{#each model as |oneStudent|}}
-          <div class="row">
-            {{edit-student ID=oneStudent.id Model=model}}
-            <div class="large-3 columns">
-                {{oneStudent.number}} {{oneStudent.firstName}} {{oneStudent.lastName}}
+  <br><br>
+  <img src="assets/images/Western.gif">
+  <h3>Students Admission System</h3>
+  <br>
+  <div class="studentsbox">
+    <ul class="circle">
+      <ul>
+        {{#each model as |oneStudent|}}
+        <div class="row">
+          {{edit-student ID=oneStudent.id Model=model}}
+          <div class="large-3 columns">
+            {{oneStudent.number}} {{oneStudent.firstName}} {{oneStudent.lastName}}
           </div>
-            <div class="large-2 columns">
-                {{delete-student ID=oneStudent.id}}
-            </div>
+          <div class="large-2 columns">
+            {{delete-student ID=oneStudent.id}}
           </div>
-      {{/each}}
+        </div>
+        {{/each}}
+      </ul>
     </ul>
-</ul>
-</div>
-<br>
+  </div>
+  <br>
 </div>
 
-<div align="center">
-{{add-new-student}}
-</div>
+{{display-manage}}
+
+
 

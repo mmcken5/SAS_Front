@@ -86,35 +86,35 @@ export default Ember.Component.extend({
         });
       },
 
-      selectResidency (residency){
-        this.set('selectedResidency', residency);
-        Ember.Logger.log(this.get('selectedResidency'));
-      },
+      // selectResidency (residency){
+      //   this.set('selectedResidency', residency);
+      //   Ember.Logger.log(this.get('selectedResidency'));
+      // },
 
-      selectGender (gender){
-        this.set('selectedGender', gender);
-        Ember.Logger.log(this.get('selectedGender'));
-      },
+      // selectGender (gender){
+      //   this.set('selectedGender', gender);
+      //   Ember.Logger.log(this.get('selectedGender'));
+      // },
 
-      selectCountry (country){
-        this.set('selectedCountry', country);
-        Ember.Logger.log(this.get('selectedCountry'));
-      },
+      // selectCountry (country){
+      //   this.set('selectedCountry', country);
+      //   Ember.Logger.log(this.get('selectedCountry'));
+      // },
 
-      selectProvince (province){
-        this.set('selectedProvince', province);
-        Ember.Logger.log(this.get('selectedProvince'));
-      },
+      // selectProvince (province){
+      //   this.set('selectedProvince', province);
+      //   Ember.Logger.log(this.get('selectedProvince'));
+      // },
 
-      selectCity (city){
-        this.set('selectedCity', city);
-        Ember.Logger.log(this.get('selectedCity'));
-      },
+      // selectCity (city){
+      //   this.set('selectedCity', city);
+      //   Ember.Logger.log(this.get('selectedCity'));
+      // },
 
-      selectAcademicload (academicload){
-        this.set('selectedAcademicload', academicload);
-        Ember.Logger.log(this.get('selectedAcademicload'));
-      },
+      // selectAcademicload (academicload){
+      //   this.set('selectedAcademicload', academicload);
+      //   Ember.Logger.log(this.get('selectedAcademicload'));
+      // },
 
       addNewStudent () {
         this.set('isStudentFormEditing', true);

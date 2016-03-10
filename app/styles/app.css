@@ -1,23 +1,89 @@
 .studentsbox{
-	background-color:#E9E6F3; 
-	padding:50px 0px 10px 0px;
-	border-top: 5px solid #502D82;
+  background-color:#E9E6F3; 
+  padding:50px 0px 10px 0px;
+  border-top: 5px solid #502D82;
+  /*max-height:300px;*/
+  /*overflow:scroll;*/
 }
 
 .spacemeup{
-	margin-top:10px
+  margin-top:10px
 }
 
 @media only screen and (min-width: 64.0625em){
-	.spacemeup .large-2 {
-	     width: 100%; 
-	}
+  .spacemeup .large-2 {
+    width: 100%; 
+  }
 }
 
 fieldset {
-	background-color: rgba(233, 230, 243, 0.48);
+  background-color: rgba(233, 230, 243, 0.48);
 }
 
 form .row .prefix-radius.row.collapse .prefix {
-	background-color: #D4D4E6;
+  background-color: #D4D4E6;
 }
+
+@charset "UTF-8";
+.accordion-navigation > a:after {
+  content: "↡";
+  padding-left: 5px;
+  float: right;
+  font-size: 20px; }
+  .accordion-navigation.active > a:after {
+    content: "↟"; 
+  }
+
+  .large-3.columns {
+    text-align:left;
+  }
+
+  .button.round.main{
+    border-radius:3px;
+    width:100%;
+  }
+
+  @media only screen and (min-width: 40em) {
+    .top-bar {
+      text-align: center; 
+    }
+    ul.center-buttons {
+      display: inline-block; 
+    }
+    .logo {
+      left: 5px;
+      top: -2px;
+      position: absolute; 
+    } 
+    .top-bar-section li:not(.has-form) a:not(.button){
+      background: #502D82;
+    }
+    .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"]{
+      border-right: solid 1px #ffffff;
+    }
+  }
+  .top-bar {
+    background: #502D82;
+  }
+  .logo {
+    max-width: 2rem;
+    margin-top: -3px;
+    margin-left: 5px; 
+  }
+
+  .menu-icon {
+    padding-top: 1.2rem; 
+  }
+
+  .top-bar.expanded {
+    background: #502D82; 
+  }
+
+  .logo {
+    margin-top: .5rem; 
+  }
+
+  select {
+    padding: inherit !important;
+    padding-left:0.5em !important;
+  }

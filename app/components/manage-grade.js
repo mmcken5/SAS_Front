@@ -5,6 +5,7 @@ export default Ember.Component.extend({
     store: Ember.inject.service(),
     selectedCoursecode: null,
     selectedStudent: null,
+    selectedProgramrecord: null,
 
     coursecodeModel: Ember.computed(function(){
       var self = this;
@@ -22,16 +23,26 @@ export default Ember.Component.extend({
       return this.get('store').findAll('student');
     }),
 
+    programrecordModel: Ember.computed(function(){
+      var self = this;
+        this.get('store').findAll('programrecord').then(function(records){
+        self.set ('selectedProgramrecord', records.get('firstObject').get('id'));
+      });
+      return this.get('store').findAll('programrecord');
+    }),
+
     actions: {
       saveGrade () {
         var myStore = this.get('store');
         var chosenCoursecode = myStore.peekRecord('coursecode', this.get ('selectedCoursecode'));
         var chosenStudent = myStore.peekRecord('student', this.get ('selectedStudent'));
+        var chosenProgramrecord = myStore.peekRecord('programrecord', this.get ('selectedProgramrecord'));
         var newGrade = myStore.createRecord('grade', {
           mark: this.get('mark'),
           section: this.get('section'),
           coursecode: chosenCoursecode,
-          student: chosenStudent
+          student: chosenStudent,
+          programrecord: chosenProgramrecord
         });
 
         newGrade.save().then(() => {
@@ -47,6 +58,11 @@ export default Ember.Component.extend({
       selectCoursecode (coursecode){
         this.set('selectedCoursecode', coursecode);
         Ember.Logger.log(this.get('selectedCoursecode'));
+      },
+
+      selectedProgramrecord (programrecord){
+        this.set('selectedProgramrecord', programrecord);
+        Ember.Logger.log(this.get('selectedProgramrecord'));
       },
 
       addNewGrade () {

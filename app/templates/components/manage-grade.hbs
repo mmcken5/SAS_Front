@@ -70,6 +70,21 @@
                   </div>
                 </div>
 
+                <div class="large-12 columns spacemeup">
+                  <div class="row collapse prefix-radius">
+                    <div class="small-3 columns">
+                      <span class="prefix">Program Record</span>
+                    </div>
+                    <div class="small-9 columns">
+                                <select onchange={{action (mut selectedProgramrecord) value="target.value"}}>
+                                  {{#each programrecordModel as |programrecordChoice|}}
+                                      <option value={{programrecordChoice.id}} selected={{eq selectedProgramrecord programrecordChoice}}>{{programrecordChoice.level}}</option>
+                                  {{/each}}
+                                </select>
+                    </div>
+                  </div>
+                </div>
+
                     </div>
                 </div>
             </form>
@@ -82,8 +97,7 @@
 {{else}}
     <div class="row">
         <div class="large-12 columns">
-            <br>
-            <a href="#" class="button round" {{action 'addNewGrade'}}>Add New Grade</a>
+            <a href="#" class="button round main" {{action 'addNewGrade'}}>Add New Grade</a>
         </div>
     </div>
 {{/if}}

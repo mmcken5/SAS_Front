@@ -51,6 +51,9 @@
                 {{#each coursecodeModel as |oneCoursecode|}}
                     <div class="row">
                         <li class="large-3 columns">  {{oneCoursecode.name}} </li>
+
+                        {{delete-coursecode ID=oneCoursecode.id}}
+
                     </div>
                 {{/each}}
                   <div class="row">

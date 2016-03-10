@@ -1,0 +1,59 @@
+<nav class="top-bar" data-topbar>
+  <section class="top-bar-section">
+    <ul class="center-buttons">
+      <li class="divider"></li>
+      <li><a href="#" {{action 'manageStudents'}}>Manage Students</a></li>
+      <li class="divider"></li>
+      <li><a href="#" {{action 'manageGrades'}}>Manage Grades</a></li>
+      <li class="divider"></li>
+      <li><a href="#" {{action 'manageDistributionresults'}}>Manage Distribution Results</a></li>
+      <li class="divider"></li>
+      <li><a href="#" {{action 'manageItrprograms'}}>Manage ITR Programs</a></li>
+      <li class="divider"></li>
+      <li><a href="#" {{action 'manageProgramadministration'}}>Manage Program Administration</a></li>
+      <li class="divider"></li>
+      <li><a href="#" {{action 'manageAdmissionrules'}}>Manage Admission Rules</a></li>
+      <li class="divider"></li>
+    </ul>
+  </section>
+</nav>
+<br>
+
+<div align="center">
+  {{#if isManagingStudents}}
+  <h4>Manage Students</h4>
+  <br>
+  {{add-new-student}} 
+  <hr>  
+  {{else if isManagingGrades}}
+  <h4>Manage Grades</h4>
+  <br>
+  {{manage-programrecord}}
+  {{manage-grade}}
+  <hr>
+  {{else if isManagingDistributionresults}}
+  <h4>Manage Distribution Results</h4>
+  <br>
+  {{manage-distributionresult}}
+  {{manage-commentcode}}
+  <hr>
+  {{else if isManagingItrprograms}}
+  <h4>Manage ITR Programs</h4>
+  <br>
+  {{manage-academicprogramcode}}
+  {{manage-itrprogram}}
+  <hr>
+  {{else if isManagingProgramadministration}}
+  <h4>Manage Program Administration</h4>
+  <br>
+  {{manage-faculty}}
+  {{manage-department}}
+  {{manage-programadministration}}
+  <hr>
+  {{else if isManagingAdmissionrules}}
+  <h4>Manage Admission Rules</h4>
+  <br>
+  {{manage-admissionrule}}
+  {{manage-logicalexpression}}
+  {{/if}}
+</div>

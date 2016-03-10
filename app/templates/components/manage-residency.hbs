@@ -30,10 +30,7 @@
                 {{#each residencyModel as |oneResidency|}}
                     <div class="row">
                         <li class="large-3 columns">  {{oneResidency.name}} </li>
-
-                        <div class="large-2 columns">
                           {{delete-residency ID=oneResidency.id }}
-                        </div>
                     </div>
                 {{/each}}
                   <div class="row">

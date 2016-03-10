@@ -12,5 +12,6 @@ export default DS.Model.extend({
   city: DS.belongsTo('city',{ async: true }),
   academicload: DS.belongsTo('academicload',{ async: true }),
   grades: DS.hasMany('grade', { async: true }),
-  distributionresults: DS.hasMany('distributionresult', { async: true }) // Added by MM @ 2:37PM
+  distributionresults: DS.hasMany('distributionresult', { async: true }),
+  itrprograms: DS.hasMany('itrprogram', {async: true})
 });
