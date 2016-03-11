@@ -1,30 +1,7 @@
 {{#if  isManagingFaculty }}
   <div class="row">
     <div class="large-12 columns">
-      
-      <br>
-      <h3 align="center">Faculties</h3>
-      <hr/>
-
-      {{!-- ADDED --}}
-        <div>
-          <ul class="circle">
-            <ul>
-              {{#each facultyModel as |facultyChoice|}}
-              <div class="row">
-                <div class="large-3 columns">
-                  {{facultyChoice.name}}
-                </div>
-                <div class="large-2 columns">
-                  {{delete-faculty ID=facultyChoice.id}}
-                </div>
-              </div>
-              {{/each}}
-            </ul>
-          </ul>
-        </div>
-      {{!-- END ADDED --}}
-
+      {{view-faculty}}
       <br>
       <h3 align="center">Add New Faculty</h3>
       <hr/>

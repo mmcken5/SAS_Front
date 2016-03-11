@@ -1,0 +1,30 @@
+{{#if  isViewingDepartments }}
+    <br>
+    <div>
+        {{#each departments as |departmentChoice|}}
+            <div class="row" align="left">
+                <div class="large-1 columns">
+                    {{delete-department ID=departmentChoice.id}}
+                </div>
+                <div class="large-11 columns">
+                    <h5>{{departmentChoice.name}}</h5>
+                </div>
+            </div>
+            <div class="row" align="left">
+                <div class="large-12 columns">
+                    {{view-programadministration ID=departmentChoice.id}}
+                </div>
+            </div>
+        {{/each}}
+        <div align="center">
+            <a href="#" class="button radius" {{action 'doneViewingDepartments'}}>Hide Departments</a>
+        </div>
+        <hr>
+    </div>
+{{else}}
+    <div class="row">
+        <div class="large-12 columns">
+            <a href="#" class="button info tiny" {{action 'viewDepartments'}}>View Departments</a>
+        </div>
+    </div>
+{{/if}}

@@ -1,0 +1,24 @@
+{{#if  isViewingProgramadministration }}
+    <br>
+    <div>
+        {{#each programadministrations as |programadministrationChoice|}}
+            <div class="row" align="left">
+                <div class="large-1 columns">
+                    {{delete-programadministration ID=programadministrationChoice.id}}
+                </div>
+                <div class="large-11 columns">
+                    {{programadministrationChoice.name}}
+                </div>
+            </div>
+        {{/each}}
+        <div align="center">
+            <a href="#" class="button radius" {{action 'doneViewingPrograms'}}>Hide Programs</a>
+        </div>
+    </div>
+{{else}}
+    <div class="row">
+        <div class="large-12 columns">
+            <a href="#" class="button info tiny" {{action 'viewProgramadministration'}}>View Programs</a>
+        </div>
+    </div>
+{{/if}}
