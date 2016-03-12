@@ -1,0 +1,30 @@
+{{#if  isViewingAdmissionrules }}
+<br>
+<div class="row">
+	<h3 align="center">Admission Rules</h3>
+	<hr/>
+    {{#each admissionruleModel as |admissionruleChoice|}}
+      	<div class="row" align="left">
+        	<div class="large-1 columns">
+          		{{delete-admissionrule ID=admissionruleChoice.id}}
+        	</div>
+        	<div class="large-11 columns">
+          		<h3>{{admissionruleChoice.description}}</h3>
+        	</div>
+      	</div>
+    	<div class="row" align="left">
+    		<div class="large-12 columns">
+          		{{view-logicalexpression ID=admissionruleChoice.id}} 
+          	</div>
+        </div>
+        <br>
+    {{/each}}
+</div>
+<a href="#" class="button radius" {{action 'doneViewingAdmissionrules'}}>Hide Admission Rules</a>
+{{else}}
+    <div class="row">
+        <div class="large-12 columns">
+        	<a href="#" class="button round main" {{action 'viewAdmissionrules'}}>View Admission Rules</a>
+        </div>
+    </div>
+{{/if}}
