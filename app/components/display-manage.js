@@ -8,9 +8,15 @@ export default Ember.Component.extend({
   isManagingItrprograms: false,
   isManagingProgramadministration: false,
   isManagingAdmissionrules: false,
+  model: null,
+  
+    model: Ember.computed(function(){
+      var self = this;
+      return this.get('store').findAll('student');
+    }),
 
-    actions: {
-  	manageStudents() {
+  actions: {
+    manageStudents() {
       this.set('isManagingStudents', true);
       this.set('isManagingGrades', false);
       this.set('isManagingDistributionresults', false);

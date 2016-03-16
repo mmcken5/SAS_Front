@@ -1,6 +1,14 @@
 .studentsbox{
   background-color:#E9E6F3; 
-  padding:50px 0px 10px 0px;
+  padding:50px 40px 10px 0px;
+  border-top: 5px solid #502D82;
+  /*max-height:300px;*/
+  /*overflow:scroll;*/
+}
+
+.admissionsbox{
+  background-color:#E9E6F3; 
+  padding:50px 230px 10px 190px;
   border-top: 5px solid #502D82;
   /*max-height:300px;*/
   /*overflow:scroll;*/
@@ -86,4 +94,52 @@ form .row .prefix-radius.row.collapse .prefix {
   select {
     padding: inherit !important;
     padding-left:0.5em !important;
+  }
+
+
+  button, .button.tiny {
+    width:75px !important;
+  }
+
+  button, .button.tiny.table {
+    margin: 0px !important;
+  }
+
+    button, .button.tiny.other {
+    width:auto !important;
+  }
+
+  button, .button.delete {
+    margin: 0 !important;
+  }
+
+  button, .button.edit {
+    margin: 0 !important;
+  }
+
+  button, .button.tiny.full{
+    width:auto !important;
+  }
+
+  button, .button.notmain {
+    width:250px !important;
+  }
+
+  .textbox{
+    margin: 0 !important; 
+    height: 2.05em !important;
+    width: 50px !important;
+
+  }
+
+  .no-bottom-margin {
+    margin-bottom:0 !important;
+  }
+
+  table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td{
+    border: 2px solid #ECDAF7;
+  }
+
+  table tr th, table tr td{
+    border: 2px solid #ECDAF7;
   }

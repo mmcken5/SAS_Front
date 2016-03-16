@@ -30,13 +30,14 @@
                     <hr>
                   </div>
                 </div>
+
                 <div class="large-12 columns">
                   <div class="row collapse prefix-radius">
                     <div class="small-3 columns">
-                      <span class="prefix">Program Name</span>
+                      <span class="prefix"> Rank 1</span>
                     </div>
                     <div class="small-9 columns">
-                      <select onchange={{action (mut selectedAcademicprogramcode) value="target.value"}}>
+                      <select onchange={{action 'remove1' value="target.value"}}>
                         <option selected="true" disabled="disabled">Select Choice One</option>  
                         {{#each academicprogramcodeModel as |academicprogramcodeChoice|}}
                             <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
@@ -46,44 +47,16 @@
                   </div>
                   <br>
                 </div>
-                <div class="large-12 columns">
-                  <div class="row collapse prefix-radius">
-                    <div class="small-2 columns">
-                      <span class="prefix">Rank</span>
-                    </div>
-                    <div class="small-3 columns">
-                      <select id="order">
-                        <option value=1>1</option>
-                      </select>
-                    </div>
-                    <div class="small-2 columns">
-                      <p></p>
-                    </div>
-                    <div class="small-2 columns">
-                      <span class="prefix">Eligibility</span>
-                    </div>
-                    <div class="small-3 columns">
-                       {{input value=eligibility type="text" placeholder="enter eligibility" }}
-                    </div>
-                  </div>
-                </div>
 
-
-                <div>
-                  <div class="large-12 columns">
-                    <hr>
-                    <br>
-                  </div>
-                </div>
                 <div class="large-12 columns">
                   <div class="row collapse prefix-radius">
                     <div class="small-3 columns">
-                      <span class="prefix">Program Name</span>
+                      <span class="prefix"> Rank 2</span>
                     </div>
                     <div class="small-9 columns">
-                      <select onchange={{action (mut selectedAcademicprogramcode1) value="target.value"}}>
-                        <option selected="true" disabled="disabled">Select Choice Two</option> 
-                        {{#each academicprogramcodeModel as |academicprogramcodeChoice|}}
+                      <select onchange={{action 'remove2' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown2 as |academicprogramcodeChoice|}}
                             <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode1 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
                         {{/each}}
                       </select>
@@ -91,44 +64,16 @@
                   </div>
                   <br>
                 </div>
-                <div class="large-12 columns">
-                  <div class="row collapse prefix-radius">
-                    <div class="small-2 columns">
-                      <span class="prefix">Rank</span>
-                    </div>
-                    <div class="small-3 columns">
-                      <select id="order1">
-                        <option value=2>2</option>
-                      </select>
-                    </div>
-                    <div class="small-2 columns">
-                      <p></p>
-                    </div>
-                    <div class="small-2 columns">
-                      <span class="prefix">Eligibility</span>
-                    </div>
-                    <div class="small-3 columns">
-                       {{input value=eligibility1 type="text" placeholder="enter eligibility" }}
-                    </div>
-                  </div>
-                </div>
 
-
-                <div>
-                  <div class="large-12 columns">
-                    <hr>
-                    <br>
-                  </div>
-                </div>
                 <div class="large-12 columns">
                   <div class="row collapse prefix-radius">
                     <div class="small-3 columns">
-                      <span class="prefix">Program Name</span>
+                      <span class="prefix"> Rank 3</span>
                     </div>
                     <div class="small-9 columns">
-                      <select onchange={{action (mut selectedAcademicprogramcode2) value="target.value"}}>
-                        <option selected="true" disabled="disabled">Select Choice Three</option> 
-                        {{#each academicprogramcodeModel as |academicprogramcodeChoice|}}
+                      <select onchange={{action 'remove3' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown3 as |academicprogramcodeChoice|}}
                             <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode2 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
                         {{/each}}
                       </select>
@@ -136,41 +81,138 @@
                   </div>
                   <br>
                 </div>
+
                 <div class="large-12 columns">
                   <div class="row collapse prefix-radius">
-                    <div class="small-2 columns">
-                      <span class="prefix">Rank</span>
-                    </div>
                     <div class="small-3 columns">
-                      <select id="order2">
-                        <option value=3>3</option>
+                      <span class="prefix"> Rank 4</span>
+                    </div>
+                    <div class="small-9 columns">
+                      <select onchange={{action 'remove4' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown4 as |academicprogramcodeChoice|}}
+                            <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode3 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
+                        {{/each}}
                       </select>
                     </div>
-                    <div class="small-2 columns">
-                      <p></p>
-                    </div>
-                    <div class="small-2 columns">
-                      <span class="prefix">Eligibility</span>
-                    </div>
-                    <div class="small-3 columns">
-                       {{input value=eligibility2 type="text" placeholder="enter eligibility" }}
-                    </div>
                   </div>
+                  <br>
                 </div>
 
+                <div class="large-12 columns">
+                  <div class="row collapse prefix-radius">
+                    <div class="small-3 columns">
+                      <span class="prefix"> Rank 5</span>
+                    </div>
+                    <div class="small-9 columns">
+                      <select onchange={{action 'remove5' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown5 as |academicprogramcodeChoice|}}
+                            <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode4 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
+                        {{/each}}
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                </div>
 
+                <div class="large-12 columns">
+                  <div class="row collapse prefix-radius">
+                    <div class="small-3 columns">
+                      <span class="prefix"> Rank 6</span>
+                    </div>
+                    <div class="small-9 columns">
+                      <select onchange={{action 'remove6' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown6 as |academicprogramcodeChoice|}}
+                            <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode5 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
+                        {{/each}}
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+
+                <div class="large-12 columns">
+                  <div class="row collapse prefix-radius">
+                    <div class="small-3 columns">
+                      <span class="prefix"> Rank 7</span>
+                    </div>
+                    <div class="small-9 columns">
+                      <select onchange={{action 'remove7' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown7 as |academicprogramcodeChoice|}}
+                            <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode6 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
+                        {{/each}}
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+
+                <div class="large-12 columns">
+                  <div class="row collapse prefix-radius">
+                    <div class="small-3 columns">
+                      <span class="prefix"> Rank 8</span>
+                    </div>
+                    <div class="small-9 columns">
+                      <select onchange={{action 'remove8' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown8 as |academicprogramcodeChoice|}}
+                            <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode7 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
+                        {{/each}}
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+
+                <div class="large-12 columns">
+                  <div class="row collapse prefix-radius">
+                    <div class="small-3 columns">
+                      <span class="prefix"> Rank 9</span>
+                    </div>
+                    <div class="small-9 columns">
+                      <select onchange={{action 'remove9' value="target.value"}}>
+                        <option selected="true" disabled="disabled">Select Choice One</option>  
+                        {{#each dropdown9 as |academicprogramcodeChoice|}}
+                            <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode8 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
+                        {{/each}}
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+
+                <div class="large-12 columns">
+                  <div class="row collapse prefix-radius">
+                    <div class="small-3 columns">
+                      <span class="prefix">Rank 10</span>
+                    </div>
+                    <div class="small-9 columns">
+                        <select onchange={{action 'setLast' value="target.value"}}>
+                          <option selected="true" disabled="disabled">Select Choice One</option>
+                          {{#each dropdown10 as |academicprogramcodeChoice|}}
+                              <option value={{academicprogramcodeChoice.id}} selected={{eq selectedAcademicprogramcode9 academicprogramcodeChoice}}>{{academicprogramcodeChoice.name}}</option>
+                          {{/each}}
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+              
             </div>
           </form>
         </fieldset>
         <br>
-        <a href="#" class="button radius" {{action 'saveItrprogram'}}>Save</a>
-        <a href="#" class="button radius" {{action 'cancel'}}>Cancel</a>
+        <a href="#" class="button primary tiny" {{action 'saveItrprogram'}}>Save</a>
+        <a href="#" class="button primary tiny" {{action 'cancel'}}>Cancel</a>
       </div>
     </div>
 {{else}}
     <div class="row">
         <div class="large-12 columns">
-            <a href="#" class="button round main" {{action 'addNewItrprogram'}}>Select ITR Programs for Student</a>
+            <a href="#" class="button tiny notmain" {{action 'addNewItrprogram'}}>Select ITR Programs for Student</a>
         </div>
     </div>
 {{/if}}

@@ -11,9 +11,13 @@ export default Ember.Component.extend({
 
   actions: {
     viewDepartments() {
-      
+    
     var self = this;
     var myStore = this.get('store');
+
+    var selectedFaculty = myStore.findRecord('faculty', this.get('ID')).then(function (faculty){
+      self.set('facultyName', faculty.get('name'))
+    })
 
     myStore.query('department', {faculty: this.get('ID')}).then(function (departments) {
       self.set('departments',departments) // first one will be used in each statement

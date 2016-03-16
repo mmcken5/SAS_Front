@@ -21,40 +21,52 @@
 
 <div align="center">
   {{#if isManagingStudents}}
-  <h4>Manage Students</h4>
-  <br>
   {{add-new-student}} 
-  <hr>  
+  
   {{else if isManagingGrades}}
-  <h4>Manage Grades</h4>
-  <br>
   {{manage-programrecord}}
   {{manage-grade}}
-  <hr>
+  
   {{else if isManagingDistributionresults}}
-  <h4>Manage Distribution Results</h4>
-  <br>
   {{manage-distributionresult}}
   {{manage-commentcode}}
-  <hr>
+
   {{else if isManagingItrprograms}}
-  <h4>Manage ITR Programs</h4>
-  <br>
   {{manage-academicprogramcode}}
   {{manage-itrprogram}}
-  <hr>
+
   {{else if isManagingProgramadministration}}
-  <h4>Manage Program Administration</h4>
+  {{view-faculty}}
   <br>
   {{manage-faculty}}
   {{manage-department}}
   {{manage-programadministration}}
-  <hr>
+
   {{else if isManagingAdmissionrules}}
-  <h4>Manage Admission Rules</h4>
-  <br>
-  {{view-admissionrule}}
   {{manage-admissionrule}}
   {{manage-logicalexpression}}
+  {{view-admissionrule}}
   {{/if}}
 </div>
+
+  {{#if isManagingStudents}}
+  <div class="studentsbox">
+    <ul class="circle">
+      <ul>
+        {{#each model as |oneStudent|}}
+        <div class="row">
+          {{edit-student ID=oneStudent.id Model=model}}
+          {{view-grades ID=oneStudent.id name=oneStudent.firstName number=oneStudent.number}}
+          {{view-studentinfo ID=oneStudent.id}}
+          <div class="large-3 columns">
+            {{oneStudent.firstName}} {{oneStudent.lastName}} ({{oneStudent.number}})
+          </div>
+          <div class="large-2 columns">
+            {{delete-student ID=oneStudent.id}}
+          </div>
+        </div>
+        {{/each}}
+      </ul>
+    </ul>
+  </div>
+{{/if}}

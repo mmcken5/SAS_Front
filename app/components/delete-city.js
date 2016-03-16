@@ -9,13 +9,10 @@ export default Ember.Component.extend({
       if (confirm ('Are you sure you need to delete this city?')) {
 
         myStore.find('city',  id).then(function(city) {
-          //city.set('students', null); // repeat this line for all connected lookup tables
-           city.set('province', null);
           city.save().then(function(){
             city.destroyRecord();
           });
         });
-
       }
     }
   }

@@ -3,7 +3,7 @@
     <div class="large-12 columns">
         <br>
         <hr/>
-        <h3 align="center">Modify Student Data</h3>
+        <h3 align="center">Modify {{studentModel.firstName}}'s Profile</h3>
         <form>
             <div class="row">
                 <div class="large-12 columns">
@@ -151,8 +151,8 @@
             </div>
         </form>
         <br>
-        <a href="#" class="button radius" {{action 'saveStudent'}}>Save</a>
-        <a href="#" class="button radius" {{action 'cancel'}}>Cancel</a>
+        <a href="#" class="button primary tiny" {{action 'saveStudent'}}>Save</a>
+        <a href="#" class="button primary tiny" {{action 'cancel'}}>Cancel</a>
     </div>
 </div>
 {{else}}
