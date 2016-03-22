@@ -40,6 +40,12 @@ export default Ember.Component.extend({
       var wholeExp = "".concat(
         document.getElementById('openBracket').value,
         chosenCourse.get('code'),
+
+        // ADDED MM
+        " ",
+        chosenCourse.get('number'),
+        // END ADDED
+
         document.getElementById('inequality').value,
         this.get('val'),
         document.getElementById('closeBracket').value);
@@ -50,6 +56,13 @@ export default Ember.Component.extend({
       document.getElementById('AndOr').value,
     document.getElementById('openBracket1').value,
     chosenCourse1.get('code'),
+
+        // ADDED MM
+        " ",
+        chosenCourse1.get('number'),
+        // END ADDED
+
+        
     document.getElementById('inequality1').value,
     this.get('val1'),
     document.getElementById('closeBracket1').value);
@@ -60,6 +73,13 @@ export default Ember.Component.extend({
           document.getElementById('AndOr1').value,
           document.getElementById('openBracket2').value,
           chosenCourse2.get('code'),
+
+        // ADDED MM
+        " ",
+        chosenCourse2.get('number'),
+        // END ADDED
+
+        
           document.getElementById('inequality2').value,
           this.get('val2'),
           document.getElementById('closeBracket2').value);
@@ -70,6 +90,13 @@ export default Ember.Component.extend({
             document.getElementById('AndOr2').value,
             document.getElementById('openBracket3').value,
             chosenCourse3.get('code'),
+
+        // ADDED MM
+        " ",
+        chosenCourse3.get('number'),
+        // END ADDED
+
+        
             document.getElementById('inequality3').value,
             this.get('val3'),
             document.getElementById('closeBracket3').value);
@@ -80,6 +107,13 @@ export default Ember.Component.extend({
               document.getElementById('AndOr3').value,
               document.getElementById('openBracket4').value,
               chosenCourse4.get('code'),
+
+        // ADDED MM
+        " ",
+        chosenCourse4.get('number'),
+        // END ADDED
+
+        
               document.getElementById('inequality4').value,
               this.get('val4'),
               document.getElementById('closeBracket4').value);
@@ -90,6 +124,13 @@ export default Ember.Component.extend({
                 document.getElementById('AndOr4').value,
                 document.getElementById('openBracket5').value,
                 chosenCourse5.get('code'),
+
+        // ADDED MM
+        " ",
+        chosenCourse5.get('number'),
+        // END ADDED
+
+        
                 document.getElementById('inequality5').value,
                 this.get('val5'),
                 document.getElementById('closeBracket5').value);
@@ -100,6 +141,14 @@ export default Ember.Component.extend({
                   document.getElementById('AndOr5').value,
                   document.getElementById('openBracket6').value,
                   chosenCourse6.get('code'),
+
+
+        // ADDED MM
+        " ",
+        chosenCourse6.get('number'),
+        // END ADDED
+
+        
                   document.getElementById('inequality6').value,
                   this.get('val6'),
                   document.getElementById('closeBracket6').value);
@@ -110,6 +159,14 @@ export default Ember.Component.extend({
                     document.getElementById('AndOr6').value,
                     document.getElementById('openBracket7').value,
                     chosenCourse7.get('code'),
+
+
+        // ADDED MM
+        " ",
+        chosenCourse7.get('number'),
+        // END ADDED
+
+        
                     document.getElementById('inequality7').value,
                     this.get('val7'),
                     document.getElementById('closeBracket7').value);
@@ -120,6 +177,14 @@ export default Ember.Component.extend({
                       document.getElementById('AndOr7').value,
                       document.getElementById('openBracket8').value,
                       chosenCourse8.get('code'),
+
+
+        // ADDED MM
+        " ",
+        chosenCourse8.get('number'),
+        // END ADDED
+
+        
                       document.getElementById('inequality8').value,
                       this.get('val8'),
                       document.getElementById('closeBracket8').value);
@@ -130,6 +195,14 @@ export default Ember.Component.extend({
                         document.getElementById('AndOr8').value,
                         document.getElementById('openBracket9').value,
                         chosenCourse9.get('code'),
+
+
+        // ADDED MM
+        " ",
+        chosenCourse9.get('number'),
+        // END ADDED
+
+        
                         document.getElementById('inequality9').value,
                         this.get('val9'),
                         document.getElementById('closeBracket9').value);
@@ -140,6 +213,14 @@ export default Ember.Component.extend({
                           document.getElementById('AndOr9').value,
                           document.getElementById('openBracket10').value,
                           chosenCourse10.get('code'),
+
+
+        // ADDED MM
+        " ",
+        chosenCourse10.get('number'),
+        // END ADDED
+
+        
                           document.getElementById('inequality10').value,
                           this.get('val10'),
                           document.getElementById('closeBracket6').value);
@@ -150,6 +231,14 @@ export default Ember.Component.extend({
                             document.getElementById('AndOr10').value,
                             document.getElementById('openBracket11').value,
                             chosenCourse11.get('code'),
+
+
+        // ADDED MM
+        " ",
+        chosenCourse11.get('number'),
+        // END ADDED
+
+        
                             document.getElementById('inequality11').value,
                             this.get('val11'),
                             document.getElementById('closeBracket11').value);
