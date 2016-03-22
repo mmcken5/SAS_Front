@@ -23,6 +23,9 @@ export default Ember.Component.extend({
       this.set('isManagingItrprograms', false);
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
+      // ADDED
+      this.set('isDistributingStudents', false);
+      // END ADDED
     },
     manageGrades() {
       this.set('isManagingStudents', false);
@@ -31,6 +34,9 @@ export default Ember.Component.extend({
       this.set('isManagingItrprograms', false);
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
+      // ADDED
+      this.set('isDistributingStudents', false);
+      // END ADDED
     },
     manageDistributionresults() {
       this.set('isManagingStudents', false);
@@ -39,6 +45,9 @@ export default Ember.Component.extend({
       this.set('isManagingItrprograms', false);
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
+      // ADDED
+      this.set('isDistributingStudents', false);
+      // END ADDED
     },
     manageItrprograms() {
       this.set('isManagingStudents', false);
@@ -47,6 +56,9 @@ export default Ember.Component.extend({
       this.set('isManagingItrprograms', true);
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
+      // ADDED
+      this.set('isDistributingStudents', false);
+      // END ADDED
     },
     manageProgramadministration() {
       this.set('isManagingStudents', false);
@@ -55,6 +67,9 @@ export default Ember.Component.extend({
       this.set('isManagingItrprograms', false);
       this.set('isManagingProgramadministration', true);
       this.set('isManagingAdmissionrules', false);
+      // ADDED
+      this.set('isDistributingStudents', false);
+      // END ADDED
     },
     manageAdmissionrules() {
       this.set('isManagingStudents', false);
@@ -63,6 +78,21 @@ export default Ember.Component.extend({
       this.set('isManagingItrprograms', false);
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', true);
+      // ADDED
+      this.set('isDistributingStudents', false);
+      // END ADDED
     }
+    // ADDED MM
+    ,
+    manageStudentDistribution() {
+      this.set('isManagingStudents', false);
+      this.set('isManagingGrades', false);
+      this.set('isManagingDistributionresults', false);
+      this.set('isManagingItrprograms', false);
+      this.set('isManagingProgramadministration', false);
+      this.set('isManagingAdmissionrules', false);
+      this.set('isDistributingStudents', true);
+    }
+    // END ADDED
   }
 });

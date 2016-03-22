@@ -14,6 +14,12 @@
       <li class="divider"></li>
       <li><a href="#" {{action 'manageAdmissionrules'}}>Manage Admission Rules</a></li>
       <li class="divider"></li>
+
+      <!-- ADDED -->
+      <li><a href="#" {{action 'manageStudentDistribution'}}>Student Distribution</a></li>
+      <li class="divider"></li>
+      <!-- END ADDED -->
+
     </ul>
   </section>
 </nav>
@@ -46,6 +52,12 @@
   {{manage-admissionrule}}
   {{manage-logicalexpression}}
   {{view-admissionrule}}
+
+  <!-- ADDED -->
+  {{else if isDistributingStudents}}
+  {{distribute-students}}
+  <!-- END ADDED -->
+
   {{/if}}
 </div>
 
