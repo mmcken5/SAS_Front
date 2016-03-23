@@ -4,23 +4,49 @@ export default Ember.Component.extend({
   store: Ember.inject.service(),
   isCompleteDistribution: false,
   isDistributionInProgress: false,
-  student: null,
+  students: null,
   grades: null,
   ID: null,
   coursecode: null,
+
+  model: Ember.computed(function(){
+      var self = this;
+      var students = this.get('store').findAll('student');
+
+      console.log("STUDENTS: " + students); // Returns a promise array
+
+      // TODO: Sort and display students based on avg (desc)
+
+	 // using a custom sort function
+	 //sortedStudents: Ember.computed.sort('students', function(a, b){
+	 //	  if (a.avg > b.avg) {
+	 //     return 1;
+	 //   } else if (a.avg < b.avg) {
+	 //     return -1;
+	 //   }
+
+	 //   return 0;
+	 // })
+
+      return students;
+    }),
 
 
   actions: {
     distributeStudents() {
       this.set('isDistributionInProgress', true);
 
-        // IN PROGRESS 1
+        // IN PROGRESS
 
         var self = this; // Maintain reference to this javascript file when doing queries (i.e the function call below will assign this = grades)
 		var myStore = this.get('store');
 
 		this.set('student', myStore.findAll('student')).then(function(e){
 			//for(i= 0; i < i, )
+
+			// TODO: Sort array based on avg
+			//self.set('students', self.set(e));
+			console.log(e) // e is NOT a Promise Array, but another form of array
 
 			self.set('ID',e.objectAt(0).get('id'));
 
@@ -33,23 +59,19 @@ export default Ember.Component.extend({
 				self.set('grades', grades);
 				self.set('coursecode', grades.objectAt(0).get('coursecode'));
 				console.log("Grade 0, coursecode: " + self.get('coursecode'));
-				console.log("Grade 0, coursecode ID: " + self.get('coursecode').get('id')); // THIS WORKS
-				console.log("Grade 0, coursecode number: " + self.get('coursecode').get('number')); // BUT THIS DOES NOT??
+				console.log("Grade 0, coursecode ID: " + self.get('coursecode').get('id'));
+
+				self.set('coursecodeID', self.get('coursecode').get('id'));
+
+				console.log("Grade 0, coursecode number: " + self.get('coursecode').get('number'));
 				console.log("Grade 0, coursecode name: " + self.get('coursecode').get('name'));
 				console.log("Grade 0, mark: " + grades.objectAt(0).get('mark'));
 
-				// TODO: ADD ANOTHER QUERY TO GET THE COURSECODE OBJECT INSTEAD OF DOING THE THING BELOW, THEN I CAN GET THE ATTRIBUTE (CAN'T CALL 2 .GETS IN A ROW)
-				// IN PROGRESS 1
-				myStore.query('coursecode', {id: self.get('coursecode').get('id')}).then(function (coursecode) {
-					console.log('coursecode id: ' + self.get('coursecode').get('id'));
-					console.log("coursecode: " + coursecode); // TODO: PULLS THE WRONG RECORD, DOESN'T SEARCH BY ID FOR SOME REASON
-					console.log("coursecode object 0: " + coursecode.objectAt(0));
-					console.log("coursecode object 0, number: " + coursecode.objectAt(0).get('number')); // THIS WORKS
-					//console.log("coursecode id: " + coursecode.get('id')); // TODO: FIGURE OUT WHY UNDEFINED
-					//console.log("coursecode number: " + coursecode.get('number')); // TODO: FIGURE OUT WHY UNDEFINED
-				
-				});
-				// END IN PROGRESS			
+				myStore.findRecord('coursecode', self.get('coursecode').get('id')).then(function (coursecode) {
+					console.log("coursecode: " + coursecode);
+					console.log("coursecode name: " + coursecode.get('name'));
+					console.log("coursecode number: " + coursecode.get('number'));
+				});		
 						
 			});
 		})

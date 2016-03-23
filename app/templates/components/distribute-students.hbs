@@ -14,20 +14,26 @@
 	            <th> 
 	                Student Name 
 	            </th>
+	            <th> 
+	                Cumulative Average 
+	            </th>
 	            <th>
 	                Engineering Discipline
 	            </th>
 	        </tr>
-	        {{#each departments as |departmentChoice|}}
+	        {{#each model as |student|}}
 	        <tr>
 	            <td>
-	                {{departmentChoice.name}}
+	                {{student.number}}
 	            </td>
 	            <td>
-	                {{view-programadministration ID=departmentChoice.id}}
+	                {{student.firstName}}
 	            </td>
 	            <td>
-	                {{delete-department ID=departmentChoice.id}}
+	                {{student.avg}}
+	            </td>
+	            <td>
+	                
 	            </td>
 	        </tr>
 	        {{/each}}
