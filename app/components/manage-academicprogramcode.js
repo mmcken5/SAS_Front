@@ -38,17 +38,19 @@ export default Ember.Component.extend({
        var selectedAcademicprogramcode = myStore.peekRecord('academicprogramcode', this.get ('selectedAcademicprogramcode'));
       /*END ADDED*/
 
+      selectedAcademicprogramcode.set('admissionrule', chosenAdmissionrule);
+
       //console.log(this.get ('selectedAcademicprogramcode'));//id 
       //console.log(selectedAcademicprogramcode.get('id'));//id same
 
 
       /*need to change this code below to update the program with the new admission rule. This is not showing in my db..*/
-      var newProgram = myStore.createRecord('academicprogramcode', {
+     /* var newProgram = myStore.createRecord('academicprogramcode', {
         name:  selectedAcademicprogramcode.get('name'), //this.get('name'), ALAN ADDED
         admissionrule: chosenAdmissionrule
-      });
+      });*/
 
-      newProgram.save().then(() => {
+      selectedAcademicprogramcode.save().then(() => {
         this.set('isManagingProgram', false);
       });
 

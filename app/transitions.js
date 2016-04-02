@@ -18,6 +18,20 @@ export default function(){
   );
   this.transition(
     this.includingInitialRender(),
+    this.fromRoute('load'),
+    this.toRoute(['user','adminPortal','students']),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.includingInitialRender(),
+    this.fromRoute('results'),
+    this.toRoute(['user','adminPortal','students']),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.includingInitialRender(),
     this.fromRoute('user'),
     this.toRoute('adminPortal'),
     this.use('toLeft'),

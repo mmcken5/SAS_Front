@@ -1,0 +1,20 @@
+
+<img src="assets/images/Western.gif">
+<h3>Data Import</h3>
+<div class="loadbox">
+
+	<h5 class="datamargin">Select data input type:</h5>
+	<select class="shortwidth centerthis" onchange={{action (mut inputType) value='target.value'}}>
+		{{#each inputTypes as |inputTypeChoice|}}
+		<option value={{inputTypeChoice}} selected={{eq inputType inputTypeChoice}}>{{inputTypeChoice}}</option>
+		{{/each}}
+	</select>
+
+	<br><br>
+
+	<div class="centerthis fileinput" align="center">
+		{{file-input fileChanged="fileSelectionChanged" selectedInputType=inputType}}
+	</div>
+</div>
+
+<pre id="out"></pre>

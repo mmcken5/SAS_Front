@@ -20,6 +20,11 @@
   padding: 30px 0px 0px 0px;
 }
 
+.loadbox{
+  background-color:#E9E6F3; 
+  border-top: 5px solid #502D82;
+}
+
 .spacemeup{
   margin-top:10px
 }
@@ -198,12 +203,68 @@ form .row .prefix-radius.row.collapse .prefix {
 
   .row.column.log-in-form{
     margin: auto;
-    width: 250px;
+    width: 291px;
     padding: 25px;
-    background-color: #F2F0F7 !important;
-    border: 5px solid #393C9E;
+    background-color: #FFFFFF !important;
+    /*border: 2px solid #393C9E;*/
+    height:100vh;
+    margin:0px 25px 0px 50px !important;
   }
 
     .row.column.log-in-form label {
       font-weight:bold;
+    }
+
+    .hero.login{
+      background-image: url("images/western-2.jpg") !important;
+      background-size: cover;
+      background-position: center top; 
+      height:100vh;
+    }
+
+    .westernLogo{
+      margin-left:20px;
+      margin-top:-25px;
+      width:200px;
+    }
+
+    .title{
+      font-weight:bold;
+    }
+
+    .labelmargin input{
+      margin-top:10px;
+    }
+
+    .datamargin{
+      margin-top:30px;
+    }
+
+    .fileinput{
+      width:200px; 
+      padding-bottom:30px;
+    }
+
+    #ember623, #ember1030, #ember682{
+      background-color: white !important;
+    }
+
+    fieldset{
+      width: 60%;
+      margin: auto;
+      padding: 0px 10px 20px 40px;
+    }
+
+    .row .row {
+      margin: 0 0rem; 
+      max-width: none;
+      width: auto;
+    }
+
+    .button.primary.tiny.table {
+      margin: 0px 0px !important; 
+    }
+
+    fieldset.student{
+      border: none !important;
     }

@@ -1,7 +1,6 @@
 {{#if  isStudentinfoFormEditing }}
 <div class="row">
     <div class="large-12 columns">
-        <br>
         <hr/>
         <h3 align="center">{{firstname}}'s Student Information</h3>
 
@@ -79,9 +78,17 @@
                         {{oneStudent.academicload.name}}
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <strong>Cumulative Average</strong>
+                    </td>
+                    <td>
+                        {{oneStudent.cumAvg}}
+                    </td>
+                </tr>
             </table>
         </div>
-
+        <br>
         <a href="#" class="button primary tiny" {{action 'cancel'}}>Done</a>
     </div>
 </div>

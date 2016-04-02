@@ -44,12 +44,12 @@ export default Ember.Component.extend({
           chosenCourseNum = chosen.get('number');
       }
       var wholeExp = "".concat(
-        document.getElementById('openBracket').value,
+        document.getElementById('openBracket').value," ",
         chosenCourse," ",
-        chosenCourseNum,
-        document.getElementById('inequality').value,
-        this.get('val'),
-        document.getElementById('closeBracket').value);
+        chosenCourseNum," ",
+        document.getElementById('inequality').value," ",
+        this.get('val')," ",
+        document.getElementById('closeBracket').value," ");
 
       if(this.isAddingTologicalExpression1==true){
         var chosenCourse1 = 'AVG';
@@ -61,13 +61,13 @@ export default Ember.Component.extend({
         }
         
         wholeExp=wholeExp.concat(
-          document.getElementById('AndOr').value,
-          document.getElementById('openBracket1').value,
+          document.getElementById('AndOr').value," ",
+          document.getElementById('openBracket1').value," ",
           chosenCourse1," ",
-          chosenCourseNum1,
-          document.getElementById('inequality1').value,
-          this.get('val1'),
-          document.getElementById('closeBracket1').value);
+          chosenCourseNum1," ",
+          document.getElementById('inequality1').value," ",
+          this.get('val1')," ",
+          document.getElementById('closeBracket1').value," ");
 
         if(this.isAddingTologicalExpression2==true){
           var chosenCourse2 = 'AVG';
@@ -78,13 +78,13 @@ export default Ember.Component.extend({
               chosenCourseNum2 = chosen.get('number');
           }
           wholeExp=wholeExp.concat(
-            document.getElementById('AndOr1').value,
-            document.getElementById('openBracket2').value,
+            document.getElementById('AndOr1').value," ",
+            document.getElementById('openBracket2').value," ",
             chosenCourse2," ",
-            chosenCourseNum2,
-            document.getElementById('inequality2').value,
-            this.get('val2'),
-            document.getElementById('closeBracket2').value);
+            chosenCourseNum2," ",
+            document.getElementById('inequality2').value," ",
+            this.get('val2')," "," ",
+            document.getElementById('closeBracket2').value," ");
 
           if(this.isAddingTologicalExpression3==true){
             var chosenCourse3 = 'AVG';
@@ -95,13 +95,13 @@ export default Ember.Component.extend({
               chosenCourseNum3 = chosen.get('number');
             }
             wholeExp=wholeExp.concat(
-              document.getElementById('AndOr2').value,
-              document.getElementById('openBracket3').value,
+              document.getElementById('AndOr2').value," ",
+              document.getElementById('openBracket3').value," ",
               chosenCourse3," ",
-              chosenCourseNum3,
-              document.getElementById('inequality3').value,
-              this.get('val3'),
-              document.getElementById('closeBracket3').value);
+              chosenCourseNum3," ",
+              document.getElementById('inequality3').value," ",
+              this.get('val3')," "," ",
+              document.getElementById('closeBracket3').value," ");
 
             if(this.isAddingTologicalExpression4==true){
               var chosenCourse4 = 'AVG';
@@ -112,13 +112,13 @@ export default Ember.Component.extend({
                   chosenCourseNum4 = chosen.get('number');
               }
               wholeExp=wholeExp.concat(
-                document.getElementById('AndOr3').value,
-                document.getElementById('openBracket4').value,
+                document.getElementById('AndOr3').value," ",
+                document.getElementById('openBracket4').value," ",
                 chosenCourse4," ",
-                choseCourseNum4,
-                document.getElementById('inequality4').value,
-                this.get('val4'),
-                document.getElementById('closeBracket4').value);
+                choseCourseNum4," ",
+                document.getElementById('inequality4').value," ",
+                this.get('val4')," ",
+                document.getElementById('closeBracket4').value," ");
 
               if(this.isAddingTologicalExpression5==true){
                 var chosenCourse5 = 'AVG';
@@ -130,13 +130,13 @@ export default Ember.Component.extend({
                 }
                 
                 wholeExp=wholeExp.concat(
-                  document.getElementById('AndOr4').value,
-                  document.getElementById('openBracket5').value,
+                  document.getElementById('AndOr4').value," ",
+                  document.getElementById('openBracket5').value," ",
                   chosenCourse5," ",
-                  chosenCourseNum5,
-                  document.getElementById('inequality5').value,
-                  this.get('val5'),
-                  document.getElementById('closeBracket5').value);
+                  chosenCourseNum5," ",
+                  document.getElementById('inequality5').value," ",
+                  this.get('val5')," ",
+                  document.getElementById('closeBracket5').value," ");
 
                 if(this.isAddingTologicalExpression6==true){
                   var chosenCourse6 = 'AVG';
@@ -147,13 +147,13 @@ export default Ember.Component.extend({
                       chosenCourseNum6 = chosen.get('number');
                   }
                   wholeExp=wholeExp.concat(
-                    document.getElementById('AndOr5').value,
-                    document.getElementById('openBracket6').value,
+                    document.getElementById('AndOr5').value," ",
+                    document.getElementById('openBracket6').value," ",
                     chosenCourse6," ",
-                    chosenCourseNum6,
-                    document.getElementById('inequality6').value,
-                    this.get('val6'),
-                    document.getElementById('closeBracket6').value);
+                    chosenCourseNum6," ",
+                    document.getElementById('inequality6').value," ",
+                    this.get('val6')," ",
+                    document.getElementById('closeBracket6').value," ");
 
                   if(this.isAddingTologicalExpression7==true){
                     var chosenCourse7 = 'AVG';
@@ -164,13 +164,13 @@ export default Ember.Component.extend({
                         chosenCourseNum7 = chosen.get('number');
                     }
                     wholeExp=wholeExp.concat(
-                      document.getElementById('AndOr6').value,
-                      document.getElementById('openBracket7').value,
+                      document.getElementById('AndOr6').value," ",
+                      document.getElementById('openBracket7').value," ",
                       chosenCourse7," ",
-                      chosenCourseNum7,
-                      document.getElementById('inequality7').value,
-                      this.get('val7'),
-                      document.getElementById('closeBracket7').value);
+                      chosenCourseNum7," ",
+                      document.getElementById('inequality7').value," ",
+                      this.get('val7')," ",
+                      document.getElementById('closeBracket7').value," ");
 
                     if(this.isAddingTologicalExpression8==true){
                       var chosenCourse8 = 'AVG';
@@ -181,13 +181,13 @@ export default Ember.Component.extend({
                           chosenCourseNum8 = chosen.get('number');
                       }
                       wholeExp=wholeExp.concat(
-                        document.getElementById('AndOr7').value,
-                        document.getElementById('openBracket8').value,
+                        document.getElementById('AndOr7').value," ",
+                        document.getElementById('openBracket8').value," ",
                         chosenCourse8," ",
-                        chosenCourseNum8,
-                        document.getElementById('inequality8').value,
-                        this.get('val8'),
-                        document.getElementById('closeBracket8').value);
+                        chosenCourseNum8," ",
+                        document.getElementById('inequality8').value," ",
+                        this.get('val8')," ",
+                        document.getElementById('closeBracket8').value," ");
 
                       if(this.isAddingTologicalExpression9==true){
                         var chosenCourse9 = 'AVG';
@@ -198,13 +198,13 @@ export default Ember.Component.extend({
                             chosenCourseNum9 = chosen.get('number');
                         }
                         wholeExp=wholeExp.concat(
-                          document.getElementById('AndOr8').value,
-                          document.getElementById('openBracket9').value,
+                          document.getElementById('AndOr8').value," ",
+                          document.getElementById('openBracket9').value," ",
                           chosenCourse9," ",
-                          chosenCourseNum9,
-                          document.getElementById('inequality9').value,
-                          this.get('val9'),
-                          document.getElementById('closeBracket9').value);
+                          chosenCourseNum9," ",
+                          document.getElementById('inequality9').value," ",
+                          this.get('val9')," ",
+                          document.getElementById('closeBracket9').value," ");
 
                         if(this.isAddingTologicalExpression10==true){
                           var chosenCourse10 = 'AVG';
@@ -215,13 +215,13 @@ export default Ember.Component.extend({
                               chosenCourseNum10 = chosen.get('number');
                           }                         
                           wholeExp=wholeExp.concat(
-                            document.getElementById('AndOr9').value,
-                            document.getElementById('openBracket10').value,
+                            document.getElementById('AndOr9').value," ",
+                            document.getElementById('openBracket10').value," ",
                             chosenCourse10," ",
-                            chosenCourseNum10,
-                            document.getElementById('inequality10').value,
-                            this.get('val10'),
-                            document.getElementById('closeBracket6').value);
+                            chosenCourseNum10," ",
+                            document.getElementById('inequality10').value," ",
+                            this.get('val10')," "," ",
+                            document.getElementById('closeBracket6').value," ");
 
                           if(this.isAddingTologicalExpression11==true){
                             var chosenCourse11 = 'AVG';
@@ -232,13 +232,13 @@ export default Ember.Component.extend({
                                 chosenCourseNum11 = chosen.get('number');
                             }
                             wholeExp=wholeExp.concat(
-                              document.getElementById('AndOr10').value,
-                              document.getElementById('openBracket11').value,
+                              document.getElementById('AndOr10').value," ",
+                              document.getElementById('openBracket11').value," ",
                               chosenCourse11," ",
-                              chosenCourseNum11,
-                              document.getElementById('inequality11').value,
-                              this.get('val11'),
-                              document.getElementById('closeBracket11').value);
+                              chosenCourseNum11," ",
+                              document.getElementById('inequality11').value," ",
+                              this.get('val11')," ",
+                              document.getElementById('closeBracket11').value," ");
                           }
                         }
                       }
