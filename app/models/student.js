@@ -16,6 +16,7 @@ export default DS.Model.extend({
   distributionresults: DS.hasMany('distributionresult', { async: true }),
   itrprograms: DS.hasMany('itrprogram', {async: true}),
   // ADDED MM
-  secondaryschools: DS.hasMany('secondaryschool', { async: true })
+  hSchool: DS.hasMany('secondaryschool', { async: true }),
+  awardInfo: DS.hasMany('scholarandawardcode', { async: true })
   // END ADDED MM
 });
