@@ -11,7 +11,10 @@
       <br>
       <form>
 
-        <div class="row">
+      <div class="row">
+          <div class="large-12 columns">
+
+        
           <div class="large-12 columns">
             <div class="row collapse prefix-radius">
               <div class="small-3 columns">
@@ -22,9 +25,9 @@
               </div>
             </div>
           </div>
-        </div>
+        
 
-        <div class="row">
+        
           <div class="large-12 columns">
             <div class="row collapse prefix-radius">
               <div class="small-3 columns">
@@ -35,9 +38,9 @@
               </div>
             </div>
           </div>
-        </div>
+        
 
-        <div class="row">
+        
           <div class="large-12 columns">
             <div class="row collapse prefix-radius">
               <div class="small-3 columns">
@@ -48,9 +51,9 @@
               </div>
             </div>
           </div>
-        </div>
+        
 
-        <div class="row">
+        
           <div class="large-12 columns">
             <div class="row collapse prefix-radius">
               <div class="small-3 columns">
@@ -61,7 +64,6 @@
               </div>
             </div>
           </div>
-        </div>
 
         <div class="large-12 columns">
             <div class="row collapse prefix-radius">
@@ -70,10 +72,12 @@
                 </div>
                 <div class="small-9 columns">
                     <select onchange={{action (mut selectedSchool) value="target.value"}}>
-                        {{#each secondarySchoolModel as |schoolChoice|}}
+                        {{#each schools as |schoolChoice|}}
                         <option value={{schoolChoice.id}} selected={{eq selectedSchool schoolChoice}}>{{schoolChoice.name}}</option>
                         {{/each}}
                     </select>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -92,7 +96,9 @@
                 </div>
             </div>
         </div>
-
+     
+    </div>
+  </div>
 
       </form>
     </fieldset>
@@ -102,6 +108,26 @@
   </div>
 </div>
 
+{{else if isSelectingStudent}}
+  <div class="large-12 columns">
+      <div class="row collapse prefix-radius">
+          <div class="small-3 columns">
+              <span class="prefix">Student</span>
+          </div>
+          <div class="small-9 columns">
+              <select onchange={{action (mut selectedStudent) value="target.value"}}>
+                  {{#each studentModel as |studentChoice|}}
+                  <option value={{studentChoice.id}} selected={{eq selectedStudent studentChoice}}>{{studentChoice.number}}</option>
+                  {{/each}}
+              </select>
+              <br>
+              <br>
+          </div>
+      </div>
+  </div>
+  <br>
+  <a href="#" class="button primary tiny" {{action 'selectStudent'}}>Select</a>
+  <a href="#" class="button primary tiny" {{action 'cancelHighschoolcoursesmark'}}>Cancel</a>
 
 
 {{else}}

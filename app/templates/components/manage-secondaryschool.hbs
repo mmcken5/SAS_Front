@@ -13,6 +13,26 @@
 
         <div class="row">
           <div class="large-12 columns">
+
+        <div class="large-12 columns">
+            <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                    <span class="prefix">Student</span>
+                </div>
+                <div class="small-9 columns">
+                    <select onchange={{action (mut selectedStudent) value="target.value"}}>
+                        {{#each studentModel as |studentChoice|}}
+                        <option value={{studentChoice.id}} selected={{eq selectedStudent studentChoice}}>{{studentChoice.number}}</option>
+                        {{/each}}
+                    </select>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        
+          <div class="large-12 columns">
             <div class="row collapse prefix-radius">
               <div class="small-3 columns">
                 <span class="prefix">Name</span>
@@ -22,23 +42,10 @@
               </div>
             </div>
           </div>
-        </div>
+       
 
-        <div class="large-12 columns">
-                            <div class="row collapse prefix-radius">
-                                <div class="small-3 columns">
-                                    <span class="prefix">Student</span>
-                                </div>
-                                <div class="small-9 columns">
-                                    <select onchange={{action (mut selectedStudent) value="target.value"}}>
-                                        {{#each studentModel as |studentChoice|}}
-                                        <option value={{studentChoice.id}} selected={{eq selectedStudent studentChoice}}>{{studentChoice.number}}</option>
-                                        {{/each}}
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
+      </div>
+    </div>
 
       </form>
     </fieldset>

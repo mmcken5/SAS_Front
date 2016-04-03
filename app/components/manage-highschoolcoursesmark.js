@@ -2,16 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     isHighschoolcoursesmarkFormEditing: false,
+    isSelectingStudent: false,
     store: Ember.inject.service(),
+    selectedStudent: null,
     selectedSchool: null,
     selectedSubject: null,
+    schools: null,
 
-    secondarySchoolModel: Ember.computed(function(){
+    studentModel: Ember.computed(function(){
       var self = this;
-        this.get('store').findAll('secondaryschool').then(function(records){
-        self.set ('selectedSchool', records.get('firstObject').get('id'));
+        this.get('store').findAll('student').then(function(records){
+        self.set ('selectedStudent', records.get('firstObject').get('id'));
       });
-      return this.get('store').findAll('secondaryschool');
+      return this.get('store').findAll('student');
     }),
 
     highSchoolSubjectModel: Ember.computed(function(){
@@ -41,6 +44,19 @@ export default Ember.Component.extend({
         });
       },
 
+      selectStudent (){
+          var self = this;
+          var myStore = this.get('store');
+
+          self.get('store').query('secondaryschool', {student: self.get('selectedStudent')}).then(function(schoolRecords){
+              self.set('selectedSchool', schoolRecords.get('firstObject').get('id'));
+              self.set('schools', schoolRecords);
+          });
+          
+          this.set('isSelectingStudent', false);
+          this.set('isHighschoolcoursesmarkFormEditing', true);
+      },
+
       selectSchool (secondarySchool){
         this.set('selectedSchool', secondarySchool);
         Ember.Logger.log(this.get('selectedSchool'));
@@ -52,10 +68,11 @@ export default Ember.Component.extend({
       },
 
       addHighschoolcoursesmark () {
-        this.set('isHighschoolcoursesmarkFormEditing', true);
+        this.set('isSelectingStudent', true);
       },
 
       cancelHighschoolcoursesmark () {
+        this.set('isSelectingStudent', false);
         this.set('isHighschoolcoursesmarkFormEditing', false);
       }
 

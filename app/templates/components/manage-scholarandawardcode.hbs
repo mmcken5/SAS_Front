@@ -11,18 +11,8 @@
       <br>
       <form>
 
-        <div class="row">
+     <div class="row">
           <div class="large-12 columns">
-            <div class="row collapse prefix-radius">
-              <div class="small-3 columns">
-                <span class="prefix">Name</span>
-              </div>
-              <div class="small-9 columns">
-                {{input value=name  type="text" placeholder="enter name"}}
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="large-12 columns">
             <div class="row collapse prefix-radius">
@@ -35,10 +25,26 @@
                         <option value={{studentChoice.id}} selected={{eq selectedStudent studentChoice}}>{{studentChoice.number}}</option>
                         {{/each}}
                     </select>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
 
+        
+          <div class="large-12 columns">
+            <div class="row collapse prefix-radius">
+              <div class="small-3 columns">
+                <span class="prefix">Name</span>
+              </div>
+              <div class="small-9 columns">
+                {{input value=name  type="text" placeholder="enter name"}}
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
 
       </form>
     </fieldset>
