@@ -31,7 +31,7 @@ actions: {
 			self.set('dob', student.get('DOB'));
 		});
 
-		// Get the secondary school info
+	// Get the secondary school info
 		myStore.query('secondaryschool', {student: self.get('ID')}).then(function(schoolRecords){
               self.set('schools', schoolRecords);
           });
@@ -70,7 +70,7 @@ actions: {
 	hideSSInfo () {
 		this.set('isViewingSecodarySchoolInfo', false);
 	},
-
+	
 	cancel () {
 		this.set('isStudentinfoFormEditing', false);
 	}

@@ -4,15 +4,13 @@ export default Ember.Component.extend({
   store: Ember.inject.service(),
   isManagingStudents: true,
   isManagingGrades: false,
-
-  // ADDED MM
-  isManagingSecondaryschool: false,
-  // END ADDED MM
-
   isManagingDistributionresults: false,
   isManagingItrprograms: false,
   isManagingProgramadministration: false,
   isManagingAdmissionrules: false,
+    // ADDED MM
+  isManagingSecondaryschool: false,
+  // END ADDED MM
   model: null,
   
     model: Ember.computed(function(){
@@ -24,31 +22,26 @@ export default Ember.Component.extend({
     manageStudents() {
       this.set('isManagingStudents', true);
       this.set('isManagingGrades', false);
-
-      // ADDED MM
-      this.set('isManagingSecondaryschool', false);
-      // END ADDED MM
-
       this.set('isManagingDistributionresults', false);
       this.set('isManagingItrprograms', false);
+            // ADDED MM
+      this.set('isManagingSecondaryschool', false);
+      // END ADDED MM
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
     },
     manageGrades() {
       this.set('isManagingStudents', false);
       this.set('isManagingGrades', true);
-
-      // ADDED MM
-      this.set('isManagingSecondaryschool', false);
-      // END ADDED MM
-
       this.set('isManagingDistributionresults', false);
       this.set('isManagingItrprograms', false);
+            // ADDED MM
+      this.set('isManagingSecondaryschool', false);
+      // END ADDED MM
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
     },
-
-    // ADDED MM
+        // ADDED MM
     manageSecondaryschool() {
       this.set('isManagingStudents', false);
       this.set('isManagingGrades', false);
@@ -59,56 +52,47 @@ export default Ember.Component.extend({
       this.set('isManagingAdmissionrules', false);
     },
     // END ADDED MM
-
     manageDistributionresults() {
       this.set('isManagingStudents', false);
       this.set('isManagingGrades', false);
-
-      // ADDED MM
-      this.set('isManagingSecondaryschool', false);
-      // END ADDED MM
-
       this.set('isManagingDistributionresults', true);
       this.set('isManagingItrprograms', false);
+            // ADDED MM
+      this.set('isManagingSecondaryschool', false);
+      // END ADDED MM
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
     },
     manageItrprograms() {
       this.set('isManagingStudents', false);
       this.set('isManagingGrades', false);
-
-      // ADDED MM
-      this.set('isManagingSecondaryschool', false);
-      // END ADDED MM
-
       this.set('isManagingDistributionresults', false);
       this.set('isManagingItrprograms', true);
+            // ADDED MM
+      this.set('isManagingSecondaryschool', false);
+      // END ADDED MM
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', false);
     },
     manageProgramadministration() {
       this.set('isManagingStudents', false);
       this.set('isManagingGrades', false);
-
-      // ADDED MM
-      this.set('isManagingSecondaryschool', false);
-      // END ADDED MM
-
       this.set('isManagingDistributionresults', false);
       this.set('isManagingItrprograms', false);
+            // ADDED MM
+      this.set('isManagingSecondaryschool', false);
+      // END ADDED MM
       this.set('isManagingProgramadministration', true);
       this.set('isManagingAdmissionrules', false);
     },
     manageAdmissionrules() {
       this.set('isManagingStudents', false);
       this.set('isManagingGrades', false);
-
-      // ADDED MM
-      this.set('isManagingSecondaryschool', false);
-      // END ADDED MM
-
       this.set('isManagingDistributionresults', false);
       this.set('isManagingItrprograms', false);
+            // ADDED MM
+      this.set('isManagingSecondaryschool', false);
+      // END ADDED MM
       this.set('isManagingProgramadministration', false);
       this.set('isManagingAdmissionrules', true);
     }
