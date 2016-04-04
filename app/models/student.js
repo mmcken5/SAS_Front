@@ -17,6 +17,8 @@ export default DS.Model.extend({
   itrprograms: DS.hasMany('itrprogram', {async: true}),
   // ADDED MM
   hSchool: DS.hasMany('secondaryschool', { async: true }),
-  awardInfo: DS.hasMany('scholarandawardcode', { async: true })
+  awardInfo: DS.hasMany('scholarandawardcode', { async: true }),
+  HSGrade: DS.belongsTo('highschooladmissionaverage',{async: true}),
+  admBase: DS.hasMany('basisofadmission', {async: true})
   // END ADDED MM
 });
